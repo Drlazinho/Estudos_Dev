@@ -1,0 +1,12 @@
+    <div>
+      <p>Nome: {{ pessoa.nome }}</p>
+      <p>Idade: {{ pessoa.idade }}</p>
+
+      @let enderecoPessoa = pessoa.endereco;
+
+      @if (enderecoPessoa) {
+        <p>Rua: {{ enderecoPessoa.rua + ", " + enderecoPessoa.numero }}</p>
+      }
+
+      <button (click)="removerPessoa(pessoa.id)">Remover</button>
+    </div>

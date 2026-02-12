@@ -1,0 +1,20 @@
+<h2>Conteúdo por Papel (Uso do Switch no Angular)</h2>
+
+@switch (userRole) {
+  @case ('admin') {
+    <p>Bem-vindo, administrador! Você tem acesso total ao sistema.</p>
+  }
+  @case ('editor') {
+    <p>
+      Bem-vindo, editor! Você pode editar conteúdos, mas não tem acesso às configurações do sistema.
+    </p>
+  }
+  @default {
+    <p>Bem-vindo, visitante! Você tem acesso limitado ao conteúdo público.</p>
+  }
+}
+<br />
+
+<button (click)="setUserRole('admin')">Definir Administrador</button>
+<button (click)="setUserRole('editor')">Definir Editor</button>
+<button (click)="setUserRole('view')">Definir Visitante</button>

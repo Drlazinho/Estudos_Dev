@@ -1,0 +1,11 @@
+@let quantidadeItens = pegarQuantidadePessoas();
+
+<h2>Uso do Let</h2>
+
+@if (quantidadeItens) {
+  <h3>Existem itens: {{ quantidadeItens }}</h3>
+} @else {
+  <h3>Sem itens</h3>
+}
+
+<button (click)="removerPessoa()">Remover Item</button>

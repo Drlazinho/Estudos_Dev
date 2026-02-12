@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --primary-color: orange;
+  --secondary-color: rgb(255, 255, 255);
+}
+
+p {
+  color: rgb(121, 255, 244);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  /* src: url(/public/fonts/Roboto_Condensed-Italic.ttf) format('truetype'); */
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  background-color: rgb(124, 124, 124);
+}

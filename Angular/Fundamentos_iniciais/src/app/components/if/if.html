@@ -1,0 +1,29 @@
+<h2>Conteúdo por Papel (Uso do if no Angular)</h2>
+
+@if (userRole === 'admin') {
+  <p>Bem-vindo, administrador! Você tem acesso total ao sistema.</p>
+} @else if (userRole === 'editor') {
+  <p>
+    Bem-vindo, editor! Você pode editar conteúdos, mas não tem acesso às configurações do sistema.
+  </p>
+} @else {
+  <p>Bem-vindo, visitante! Você tem acesso limitado ao conteúdo público.</p>
+}
+<br />
+
+<button (click)="setUserRole('admin')">Definir Administrador</button>
+<button (click)="setUserRole('editor')">Definir Editor</button>
+<button (click)="setUserRole('visitante')">Definir Visitante</button>
+
+<h3>Em versão antigas com *ngIf</h3>
+
+<p>Deve importar o pipe CommonModule ou NgIf</p>
+<ng-template *ngIf="userRole === 'admin'; else editorBlock">
+  <p>Bem-vindo, administrador! Você tem acesso total ao sistema.</p>
+</ng-template>
+<ng-template #editorBlock>
+  <p *ngIf="userRole === 'editor'">
+    Bem-vindo, editor! Você pode editar conteúdos, mas não tem acesso às configurações do sistema.
+  </p>
+</ng-template>
+<p>Não exibi devido ser ultrapassado nessa versão Angular 21, deixou de ser usado a partir do 17</p>

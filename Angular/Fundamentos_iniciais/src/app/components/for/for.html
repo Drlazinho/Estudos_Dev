@@ -1,0 +1,16 @@
+<br/>
+<br/>
+<br/>
+<button (click)="atualizarLista()">Atualizar lista</button>
+
+<h2>Lista de Produtos</h2>
+
+@for (product of products; track product.id) {
+  <div>
+    <h3>{{ product.name }}</h3>
+    <p>R$ {{ product.price | number : "1.2-2" }}</p>
+    <button (click)="removerProduto(product.id)">Remover</button>
+  </div>
+} @empty {
+  <p>Nenhum produto encontrado.</p>
+}
