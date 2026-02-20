@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Mastery - Lab do Lazinho</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main-wrapper">
+      <!--  BLOCO 1: HERO TIMELINE (Intro)  -->
+      <section id="hero-module" class="module-section">
+        <div class="container">
+          <h1 class="title">Explore o Infinito</h1>
+          <p class="description">Domine animações avançadas com GSAP.</p>
+          <button class="btn">Começar Jornada</button>
+        </div>
+      </section>
+
+      <hr />
+      <!-- BLOCO 2 e 3: SCROLLTRIGGER BÁSICO -->
+      <section id="stagger-module" class="module-section">
+        <h2>Animação em Cascata (Stagger)</h2>
+        <div class="grid">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+      </section>
+      <!-- BLOCO 4: SCRUB & PROGRESS BAR -->
+      <div class="progress-bar"></div>
+
+      <section id="parallax-module" class="module-section">
+        <h2>Efeito Scrub (Parallax)</h2>
+        <div class="parallax-container">
+          <div class="box parallax-box">Desça para me mover</div>
+        </div>
+      </section>
+      <!-- PINNING & SECTIONS  -->
+      <section id="pin-module">
+        <div class="pin-container">
+          <div class="panel panel-1">
+            <h1>Fique Parado</h1>
+          </div>
+          <div class="panel panel-2">
+            <h2>Enquanto eu deslizo...</h2>
+          </div>
+        </div>
+      </section>
+
+      <section style="height: 100vh; background: #111"></section>
+      <!--  -->
+      <section id="svg-module" class="module-section">
+        <h2>Animação de Traçado (SVG)</h2>
+        <svg viewBox="0 0 200 200" width="200" height="200" class="svg-icon">
+          <circle
+            class="path"
+            cx="100"
+            cy="100"
+            r="80"
+            stroke="#00e5ff"
+            stroke-width="5"
+            fill="none"
+          />
+
+          <path
+            class="path"
+            d="M20,180 L100,20 L180,180 Z"
+            stroke="#5600ff"
+            stroke-width="5"
+            fill="none"
+          />
+        </svg>
+      </section>
+
+      <section id="svg-text-module" class="module-section">
+        <h2>Animação de Texto SVG</h2>
+        <svg
+          viewBox="0 0 300 100"
+          width="300"
+          height="100"
+          class="svg-text-icon"
+        >
+          <text
+            x="50%"
+            y="50%"
+            text-anchor="middle"
+            dominant-baseline="middle"
+            class="svg-text"
+            font-family="Arial, sans-serif"
+            font-size="48"
+            stroke="#ff0077"
+            stroke-width="2"
+            fill="none"
+          >
+            LAZINHO
+          </text>
+        </svg>
+      </section>
+      <section style="height: 100vh; background: #111"></section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
